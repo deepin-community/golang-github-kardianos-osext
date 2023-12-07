@@ -1,15 +1,30 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-kardianos-osext
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Tim Potter <tpot@hpe.com>,
+           Anthony Fok <foka@debian.org>
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any
+Standards-Version: 4.6.1
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-kardianos-osext
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-kardianos-osext.git
+Homepage: https://github.com/kardianos/osext
+XS-Go-Import-Path: github.com/kardianos/osext
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-kardianos-osext-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Extend "os" package with Executable and ExecutableFolder
+ This Go library implements functions for discovering the current
+ executable and folder to re-invoke the currently running program.
+ This can be useful for upgrading the current executable or finding
+ resources located relative to the executable file. Both working
+ directory and the os.Args[0] value are arbitrary and cannot be
+ relied on; os.Args[0] can be "faked"
+ .
+ These methods are available in the "os" package from Go 1.8 and later.

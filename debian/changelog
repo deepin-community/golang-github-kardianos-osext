@@ -1,5 +1,133 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-kardianos-osext (0.0~git20190222.2bc1f35-3) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Repository-Browse.
+  * Update standards version to 4.6.1, no changes needed.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Mon, 21 Nov 2022 12:38:08 +0000
+
+golang-github-kardianos-osext (0.0~git20190222.2bc1f35-2) unstable; urgency=medium
+
+  * debian/control: Change Section from devel to golang
+
+ -- Anthony Fok <foka@debian.org>  Thu, 19 Nov 2020 13:08:51 -0700
+
+golang-github-kardianos-osext (0.0~git20190222.2bc1f35-1) unstable; urgency=medium
+
+  [ Debian Janitor (Jelmer Vernooĳ) ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Apply multi-arch hints:
+    + golang-github-kardianos-osext-dev: Add Multi-Arch: foreign.
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20190222.2bc1f35
+  * debian/watch: Remove custom pretty rule so that the version number
+    is consistent with newer Debian golang packages
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Bump Standards-Version to 4.5.0 (no change)
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+
+ -- Anthony Fok <foka@debian.org>  Thu, 19 Nov 2020 12:56:13 -0700
+
+golang-github-kardianos-osext (0.0~git20170510.0.ae77be6-6) unstable; urgency=medium
+
+  * Team upload.
+  * Update Team address to team+pkg-go@tracker.d.o.
+  * Update Standards-Version to 4.2.1. (no changes)
+  * Update debhelper and compat level to 11.
+  * Add watch file.
+  * Remove unused variable in d/rules.
+  * Add patch to disable flaky test. (Closes: #902467)
+
+ -- Shengjing Zhu <i@zhsj.me>  Sat, 01 Sep 2018 16:37:39 +0800
+
+golang-github-kardianos-osext (0.0~git20170510.0.ae77be6-5) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * Apply "cme fix dpkg" fixes to debian/control,
+    bumping Standards-Version to 4.1.4, and
+    changing Priority from extra to optional, etc.
+
+ -- Anthony Fok <foka@debian.org>  Mon, 30 Apr 2018 09:23:20 -0600
+
+golang-github-kardianos-osext (0.0~git20170510.0.ae77be6-4) unstable; urgency=medium
+
+  * Team upload.
+  * Remove Michael Lustfield (self) from Uploaders list.
+
+ -- Michael Lustfield <michael@lustfield.net>  Sat, 03 Feb 2018 12:13:27 -0600
+
+golang-github-kardianos-osext (0.0~git20170510.0.ae77be6-3) unstable; urgency=medium
+
+  * Remove d/watch (upstream does not provide releases).
+  * Bump Standards-Version to 4.1.1.
+  * Add Testsuite to d/control.
+
+ -- Michael Lustfield <michael@lustfield.net>  Sun, 15 Oct 2017 20:39:05 -0500
+
+golang-github-kardianos-osext (0.0~git20170510.0.ae77be6-2) unstable; urgency=medium
+
+  * Re-upload.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 09 Jul 2017 09:08:42 -0600
+
+golang-github-kardianos-osext (0.0~git20170510.0.ae77be6-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Update the rest of the source package in Git, including a
+    new Vcs-Git URL, to reflect the source package name change
+    in 0.0~git20170309.0.9d302b5-1.
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 09 Jul 2017 07:06:06 -0600
+
+golang-github-kardianos-osext (0.0~git20170309.0.9d302b5-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Changed source package name from "golang-osext" to
+    "golang-github-kardianos-osext" (Closes: #859591, #840676, etc.)
+  * Updated package description.
+  * Bumped d/compat: no changes needed.
+  * Add myself to the list of Uploaders.
+
+ -- Michael Lustfield <michael@lustfield.net>  Wed, 05 Apr 2017 03:08:20 -0500
+
+golang-osext (0.0~git20151222.0.29ae4ff-1) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * Add debian/watch file
+
+  [ Anthony Fok ]
+  * New upstream version (no change)
+  * Update fields in debian/control
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Use secure https URLs for Vcs-* fields
+    - Add XS-Go-Import-Path field
+    - Remove unneeded Depends on "golang-go | gccgo"
+
+ -- Anthony Fok <foka@debian.org>  Sat, 30 Apr 2016 23:18:01 +0800
+
+golang-osext (0.0~git20151124.0.10da294-2) unstable; urgency=medium
+
+  * Allow package to be installed with gccgo where golang-go is unavailable
+
+ -- Anthony Fok <foka@debian.org>  Fri, 15 Jan 2016 01:35:48 -0700
+
+golang-osext (0.0~git20151124.0.10da294-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20151124.0.10da294
+  * Add myself (Anthony Fok) as an uploader to debian/control
+
+ -- Anthony Fok <foka@debian.org>  Tue, 24 Nov 2015 23:55:16 -0700
+
+golang-osext (0.0~git20150409-1) unstable; urgency=low
+
+  * Initial release (Closes: #785278)
+
+ -- Tim Potter <tpot@hp.com>  Sat, 09 May 2015 18:31:44 +1000
